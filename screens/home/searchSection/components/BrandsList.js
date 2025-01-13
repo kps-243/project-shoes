@@ -3,7 +3,7 @@ import { brands } from "../../../../data/brands.js"
 import BrandItem from "./BrandItem.js";
 import { spaces } from "../../../../constants/spaces.js";
 import { useState } from "react";
-import ItemHorizontalSeparator from "./ItemHorizontalSeparator.js";
+import ItemSeparator from "../../../../ui-components/separators/ListItemsSeparator.js";
 
 export default function BrandList() {
     const [selectedBrand, setSelectedBrand] = useState("nike");
@@ -24,7 +24,7 @@ export default function BrandList() {
         }
         style={styles.listContainer}
         contentContainerStyle={styles.contentStyle}
-        ItemSeparatorComponent={ItemHorizontalSeparator}
+        ItemSeparatorComponent={<ItemSeparator width={spaces.S} />}
         />
     )
 }

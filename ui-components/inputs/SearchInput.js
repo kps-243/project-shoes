@@ -5,6 +5,7 @@ import { raduis } from "../../constants/raduis";
 import EvilIcons from '@expo/vector-icons/EvilIcons';
 import { textSize } from "../../constants/textSize";
 import { ICON_SIZE } from "../../constants/sizes";
+
 export default function SearchInput ({ placeholder, value, onChangeText }) {
     return (
         <View style={styles.inputContainer}>
