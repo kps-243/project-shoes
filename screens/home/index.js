@@ -2,16 +2,24 @@ import { SafeAreaView, View, StyleSheet, StatusBar } from "react-native";
 import { colors } from "../../constants/color";
 import SearchSection from "./searchSection";
 import ListSection from "./listSection";
-import NewshSection from "./newsSection";
+import NewsSection from "./newsSection";
+import { useState } from "react";
 
 export default function HomeScreen() {
+    const [inputValue, setInputValue] = useState("");
+    const [selectedBrand, setSelectedBrand] = useState("nike");
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar/>
             <View style={{width: "100%", backgroundColor: "#000", height: 60}}/>
-            <SearchSection/>
-            <ListSection/>
-            <NewshSection/>
+            <SearchSection 
+                inputValue={inputValue} 
+                setInputValue={setInputValue} 
+                selectedBrand={selectedBrand}
+                setSelectedBrand={setSelectedBrand}
+            />
+            <ListSection selectedBrand={selectedBrand} inputValue={inputValue} />
+            <NewsSection selectedBrand={selectedBrand} />
             <View style={{width: "100%", backgroundColor: "#000", height: 106}}/>
         </SafeAreaView>
     )
