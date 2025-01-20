@@ -3,6 +3,7 @@ import Banner from "../components/Banner";
 import HorizontalCard from "./components/HorizontalCard";
 import { shoes } from "../../../data/shoes";
 import { spaces } from "../../../constants/spaces";
+import { IS_LARGE_SCREEN } from "../../../constants/sizes";
 
 export default function NewshSection({ selectedBrand }) {
     const item = shoes.find((elem) => elem.brand === selectedBrand).stock.find((elem) => elem.new)
@@ -17,7 +18,7 @@ export default function NewshSection({ selectedBrand }) {
 const styles = StyleSheet.create({
     container: {
         flex: 160,
-        minHeight: 160,
+        minHeight: IS_LARGE_SCREEN ? 320 : 160,
         paddingVertical: spaces.M
     }
 })
