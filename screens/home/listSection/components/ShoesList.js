@@ -9,7 +9,6 @@ export default function ShoesList({ selectedBrand, inputValue }) {
     const data = shoes
     .find((elem) => elem.brand === selectedBrand)
     .stock.filter(item => !item.new);
-    console.log(inputValue)
 
     const filteredData = inputValue 
     ? data.filter((elem) => 

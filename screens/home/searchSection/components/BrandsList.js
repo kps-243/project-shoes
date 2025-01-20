@@ -9,6 +9,7 @@ export default function BrandList({selectedBrand, setSelectedBrand}) {
         <FlatList 
         showsHorizontalScrollIndicator={false}
         horizontal
+        bounces={false}
         data={brands} 
         keyExtractor={(item) => item.name} 
         renderItem=
